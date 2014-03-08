@@ -1,0 +1,27 @@
+<head>
+  <title>meteor-instancescoped-helper-rerun</title>
+</head>
+
+<body>
+	<h1>Repeat the same template three times, so we can see the effect:</h1>
+	<p>This example repo shows the how one can use the "guid" of the template to rerun helpers template instance wise. Though i would like to see a official way of keeping states template instance wise.</p>
+	
+	<br><br>
+	<hr>
+
+	{{> exampleTemplate}}
+	<br><br>
+
+	{{> exampleTemplate}}
+	<br><br>
+
+	{{> exampleTemplate}}
+	<br><br>
+</body>
+
+<template name="exampleTemplate">
+	<p>Uses Session: {{sessionHelper}}</p>
+	<p>Uses Session+guid: {{sessionHelperGuid guid}}</p>
+	<button class="session">Set random number</button>
+	<button class="guid">Set random number (using guid)</button>
+</template>
